@@ -1,54 +1,44 @@
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaGoogle } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaGoogle, FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-900 py-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center px-6">
+    <nav className="navbar">
+      <div className="navbar-container">
         {/* Logo */}
-        <h1 className="text-xl font-bold text-white">Meu Portfólio</h1>
+        <h1 className="navbar-logo">Thomas John Ertel</h1>
 
         {/* Links */}
-        <ul className="flex space-x-6">
+        <ul className="navbar-links">
           <li>
-            <Link href="/" className="text-white hover:text-gray-400 transition-all">
-              Home
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/about" className="text-white hover:text-gray-400 transition-all">
-              Sobre
-            </Link>
+            <Link href="/about">Sobre</Link>
           </li>
           <li>
-            <Link href="/projects" className="text-white hover:text-gray-400 transition-all">
-              Projetos
-            </Link>
+            <Link href="/projects">Projetos</Link>
+          </li>
+          <li>  
+            <Link href="/skills">Habilidades</Link>
           </li>
           <li>
-            <Link href="/skills" className="text-white hover:text-gray-400 transition-all">
-              Habilidades
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="text-white hover:text-gray-400 transition-all">
-              Contato
-            </Link>
+            <Link href="/contact">Contato</Link>
           </li>
         </ul>
 
-        {/* Ícones Sociais */}
-        <div className="flex space-x-4">
-          <Link href="#" className="text-white hover:text-gray-400 transition-all">
-            <FaGoogle size={18} />
-          </Link>
-          <Link href="#" className="text-white hover:text-gray-400 transition-all">
-            <FaFacebookF size={18} />
-          </Link>
-          <Link href="#" className="text-white hover:text-gray-400 transition-all">
-            <FaTwitter size={18} />
-          </Link>
-        </div>
+        <div className="navbar-icons">
+  <Link href="https://br.linkedin.com/in/thomasjohnertel">
+    <FaLinkedin size={18} style={{ color: 'white' }} />
+  </Link>
+  <Link href="https://github.com/ThomasJohnErtel?trk=public_profile_project-button">
+    <FaGithub size={18} style={{ color: 'white' }} />
+  </Link>
+  <Link href="https://www.instagram.com/thomasjohnertel/">
+    <FaInstagram size={18} style={{ color: 'white' }} />
+  </Link>
+</div>
+      
       </div>
     </nav>
   );
